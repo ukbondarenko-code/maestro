@@ -106,10 +106,6 @@
 
 
 
-<script async src="https://static.sppopups.com/assets/loader.js" data-chats-widget-id="74f12016-b7a4-48b5-85ad-a041d59361cb"></script>
-
-
-
 
     
 </head>
@@ -139,5 +135,15 @@
             document.getElementById('popup').style.display = show ? 'flex' : 'none';
         }
     </script>
+
+
+
+
+
+
+<script async src="https://static.sppopups.com/assets/loader.js" data-chats-widget-id="74f12016-b7a4-48b5-85ad-a041d59361cb"></script>
+
+
+    
 </body>
 </html>
