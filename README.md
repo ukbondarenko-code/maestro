@@ -71,16 +71,5 @@
 
     <script async src="https://static.sppopups.com/assets/loader.js" data-chats-widget-id="74f12016-b7a4-48b5-85ad-a041d59361cb"></script>
 
-
-<script type="text/javascript">
-spPopupsScript = document.createElement('script')
-spPopupsScript.src = 'https://static.sppopups.com/assets/loader.js';
-spPopupsScript.async = true;
-spPopupsScript.setAttribute("data-chats-widget-id",'74f12016-b7a4-48b5-85ad-a041d59361cb');
-document.head.appendChild(spPopupsScript);
-</script>
-
-<script async src="https://static.sppopups.com/assets/loader.js" data-chats-widget-id="74f12016-b7a4-48b5-85ad-a041d59361cb"></script>
-
 </body>
 </html>
