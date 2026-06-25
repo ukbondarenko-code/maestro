@@ -6,7 +6,7 @@
     <title>Maestro Method | Практический разбор</title>
     <style>
         body {
-            margin: 0;
+            margin: 1;
             padding: 0;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: #0b1d12;
