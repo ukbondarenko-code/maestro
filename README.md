@@ -62,11 +62,14 @@
 <body>
 
     <div class="container">
-        <div class="надзаголовок">Бесплатное practical обучение</div>
+        <div class="надзаголовок">Бесплатное практическое обучение</div>
         <h1>Как экспертам получать стабильные заявки и продажи онлайн без хаоса и рутины</h1>
         <div class="описание">Практический разбор методологии и структуры ведения экспертной онлайн-практики для коучей и консультантов.</div>
         
-<button class="sp_popup_e3cda747-ca8e-4b57-a5fa-bd866784f138">Click</button>
+        <button class="btn sp_popup_e3cda747-ca8e-4b57-a5fa-bd866784f138">ПОЛУЧИТЬ ДОСТУП К ОБУЧЕНИЮ</button>
+    </div>
+
+    <script async src="https://static.sppopups.com/assets/loader.js" data-chats-widget-id="74f12016-b7a4-48b5-85ad-a041d59361cb"></script>
 
 </body>
 </html>
