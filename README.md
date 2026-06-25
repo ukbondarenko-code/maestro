@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maestro Method | Практический разбор</title>
     <style>
-        /* Базовые стили для максимальной скорости загрузки */
         body {
             margin: 0;
             padding: 0;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #0b1d12; /* Глубокий премиальный темно-зеленый */
+            background-color: #0b1d12;
             color: #ffffff;
             display: flex;
             justify-content: center;
@@ -23,7 +22,7 @@
             padding: 20px;
             box-sizing: border-box;
         }
-        . надзаголовок {
+        .надзаголовок {
             font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -58,7 +57,6 @@
         .btn:hover {
             background-color: #e2ede6;
         }
-        /* Стили попапа */
         .overlay {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -101,13 +99,6 @@
             color: #a8c3b0;
         }
     </style>
-
-
-
-
-
-
-    
 </head>
 <body>
 
@@ -123,8 +114,10 @@
         <div class="modal">
             <span class="close-btn" onclick="toggleModal(false)">&times;</span>
             <h2>Введите Ваш Email</h2>
-            <form action="СЮДА_ВСТАВИМ_ССЫЛКУ_ПРИЕМЩИКА" method="POST">
+            
+            <form action="https://events.sendpulse.com/forms/send/74f12016-b7a4-48b5-85ad-a041d59361cb" method="POST" id="sp-form">
                 <input type="email" name="email" placeholder="example@email.com" required>
+                <input type="hidden" name="sender" value="github_pages">
                 <button type="submit" class="btn" style="background-color: #a8c3b0; color: #0b1d12;">ОТКРЫТЬ ВИДЕОУРОКИ</button>
             </form>
         </div>
@@ -134,16 +127,15 @@
         function toggleModal(show) {
             document.getElementById('popup').style.display = show ? 'flex' : 'none';
         }
+
+        // Этот скрипт перенаправит пользователя на ваши видеоуроки СРАЗУ после клика, не дожидаясь тормозов SendPulse
+        document.getElementById('sp-form').addEventListener('submit', function() {
+            setTimeout(function() {
+                // ЗАМЕНИТЕ ССЫЛКУ НИЖЕ НА СТРАНИЦУ С ВАШИМИ ВИДЕОУРОКАМИ!
+                window.location.href = 'https://ссылка-на-ваши-видеоуроки.com';
+            }, 300); 
+        });
     </script>
 
-
-
-
-
-
-<script async src="https://static.sppopups.com/assets/loader.js" data-chats-widget-id="74f12016-b7a4-48b5-85ad-a041d59361cb"></script>
-
-
-    
 </body>
 </html>
