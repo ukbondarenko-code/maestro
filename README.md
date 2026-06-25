@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maestro Method | Практический разбор</title>
     <style>
-        /* Оставляем наши ультра-легкие стили */
         body {
             margin: 0;
             padding: 0;
@@ -63,40 +62,14 @@
 <body>
 
     <div class="container">
-        <div class="надзаголовок">Бесплатное практическое обучение</div>
+        <div class="надзаголовок">Бесплатное practical обучение</div>
         <h1>Как экспертам получать стабильные заявки и продажи онлайн без хаоса и рутины</h1>
         <div class="описание">Практический разбор методологии и структуры ведения экспертной онлайн-практики для коучей и консультантов.</div>
         
-        <button class="btn" id="start-btn" onclick="loadSendPulsePopup()">ПОЛУЧИТЬ ДОСТУП К ОБУЧЕНИЮ</button>
+        <button class="btn">ПОЛУЧИТЬ ДОСТУП К ОБУЧЕНИЮ</button>
     </div>
 
-    <script>
-        function loadSendPulsePopup() {
-            // Меняем текст на кнопке, пока подгружается попап, чтобы пользователь видел отклик
-            var btn = document.getElementById('start-btn');
-            btn.innerText = 'ЗАГРУЗКА...';
-            btn.disabled = true;
-
-            // Динамически и мгновенно создаем и внедряем скрипт SendPulse в момент клика
-            var script = document.createElement('script');
-            script.async = true;
-            script.src = "https://static.sppopups.com/assets/loader.js";
-            script.setAttribute('data-chats-widget-id', '74f12016-b7a4-48b5-85ad-a041d59361cb');
-            
-            // Как только скрипт загрузился, возвращаем кнопке исходный вид
-            script.onload = function() {
-                btn.innerText = 'ПОЛУЧИТЬ ДОСТУП К ОБУЧЕНИЮ';
-                btn.disabled = false;
-                
-                // Инструкция для SendPulse автоматически открыть попап, если он настроен на клик или показ
-                if (window.spPopups) {
-                    window.spPopups.open(); 
-                }
-            };
-
-            document.head.appendChild(script);
-        }
-    </script>
+    <script async src="https://static.sppopups.com/assets/loader.js" data-chats-widget-id="74f12016-b7a4-48b5-85ad-a041d59361cb"></script>
 
 </body>
 </html>
