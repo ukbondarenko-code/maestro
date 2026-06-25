@@ -1,2 +1,132 @@
-# maestro
-MAESTRO ACADEMY
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maestro Method | Практический разбор</title>
+    <style>
+        /* Базовые стили для максимальной скорости загрузки */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0b1d12; /* Глубокий премиальный темно-зеленый */
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        .container {
+            max-width: 540px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        . надзаголовок {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #a8c3b0;
+            margin-bottom: 15px;
+        }
+        h1 {
+            font-size: 26px;
+            line-height: 1.3;
+            margin: 0 0 15px 0;
+            font-weight: 700;
+        }
+        .описание {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #d1e0d7;
+            margin-bottom: 30px;
+        }
+        .btn {
+            background-color: #ffffff;
+            color: #0b1d12;
+            border: none;
+            padding: 16px 32px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            box-sizing: border-box;
+            transition: background 0.2s;
+        }
+        .btn:hover {
+            background-color: #e2ede6;
+        }
+        /* Стили попапа */
+        .overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .modal {
+            background: #132e1d;
+            padding: 30px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 400px;
+            box-sizing: border-box;
+            position: relative;
+            text-align: left;
+        }
+        .modal h2 {
+            margin: 0 0 15px 0;
+            font-size: 20px;
+        }
+        .modal input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #345c43;
+            background: #0b1d12;
+            color: #fff;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px; right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #a8c3b0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="надзаголовок">Бесплатное практическое обучение</div>
+        <h1>Как экспертам получать стабильные заявки и продажи онлайн без хаоса и рутины</h1>
+        <div class="описание">Практический разбор методологии и структуры ведения экспертной онлайн-практики для коучей и консультантов.</div>
+        
+        <button class="btn" onclick="toggleModal(true)">ПОЛУЧИТЬ ДОСТУП К ОБУЧЕНИЮ</button>
+    </div>
+
+    <div class="overlay" id="popup">
+        <div class="modal">
+            <span class="close-btn" onclick="toggleModal(false)">&times;</span>
+            <h2>Введите Ваш Email</h2>
+            <form action="СЮДА_ВСТАВИМ_ССЫЛКУ_ПРИЕМЩИКА" method="POST">
+                <input type="email" name="email" placeholder="example@email.com" required>
+                <button type="submit" class="btn" style="background-color: #a8c3b0; color: #0b1d12;">ОТКРЫТЬ ВИДЕОУРОКИ</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleModal(show) {
+            document.getElementById('popup').style.display = show ? 'flex' : 'none';
+        }
+    </script>
+</body>
+</html>
