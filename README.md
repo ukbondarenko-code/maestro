@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maestro Method | Практический разбор</title>
     <style>
+        /* Оставляем наши ультра-легкие стили */
         body {
             margin: 0;
             padding: 0;
@@ -57,47 +58,6 @@
         .btn:hover {
             background-color: #e2ede6;
         }
-        .overlay {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-        .modal {
-            background: #132e1d;
-            padding: 30px;
-            border-radius: 8px;
-            width: 90%;
-            max-width: 400px;
-            box-sizing: border-box;
-            position: relative;
-            text-align: left;
-        }
-        .modal h2 {
-            margin: 0 0 15px 0;
-            font-size: 20px;
-        }
-        .modal input[type="email"] {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border: 1px solid #345c43;
-            background: #0b1d12;
-            color: #fff;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-size: 16px;
-        }
-        .close-btn {
-            position: absolute;
-            top: 10px; right: 15px;
-            font-size: 24px;
-            cursor: pointer;
-            color: #a8c3b0;
-        }
     </style>
 </head>
 <body>
@@ -107,34 +67,35 @@
         <h1>Как экспертам получать стабильные заявки и продажи онлайн без хаоса и рутины</h1>
         <div class="описание">Практический разбор методологии и структуры ведения экспертной онлайн-практики для коучей и консультантов.</div>
         
-        <button class="btn" onclick="toggleModal(true)">ПОЛУЧИТЬ ДОСТУП К ОБУЧЕНИЮ</button>
-    </div>
-
-    <div class="overlay" id="popup">
-        <div class="modal">
-            <span class="close-btn" onclick="toggleModal(false)">&times;</span>
-            <h2>Введите Ваш Email</h2>
-            
-            <form action="https://events.sendpulse.com/forms/send/74f12016-b7a4-48b5-85ad-a041d59361cb" method="POST" id="sp-form">
-                <input type="email" name="email" placeholder="example@email.com" required>
-                <input type="hidden" name="sender" value="github_pages">
-                <button type="submit" class="btn" style="background-color: #a8c3b0; color: #0b1d12;">ОТКРЫТЬ ВИДЕОУРОКИ</button>
-            </form>
-        </div>
+        <button class="btn" id="start-btn" onclick="loadSendPulsePopup()">ПОЛУЧИТЬ ДОСТУП К ОБУЧЕНИЮ</button>
     </div>
 
     <script>
-        function toggleModal(show) {
-            document.getElementById('popup').style.display = show ? 'flex' : 'none';
-        }
+        function loadSendPulsePopup() {
+            // Меняем текст на кнопке, пока подгружается попап, чтобы пользователь видел отклик
+            var btn = document.getElementById('start-btn');
+            btn.innerText = 'ЗАГРУЗКА...';
+            btn.disabled = true;
 
-        // Этот скрипт перенаправит пользователя на ваши видеоуроки СРАЗУ после клика, не дожидаясь тормозов SendPulse
-        document.getElementById('sp-form').addEventListener('submit', function() {
-            setTimeout(function() {
-                // ЗАМЕНИТЕ ССЫЛКУ НИЖЕ НА СТРАНИЦУ С ВАШИМИ ВИДЕОУРОКАМИ!
-                window.location.href = 'https://ссылка-на-ваши-видеоуроки.com';
-            }, 300); 
-        });
+            // Динамически и мгновенно создаем и внедряем скрипт SendPulse в момент клика
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = "https://static.sppopups.com/assets/loader.js";
+            script.setAttribute('data-chats-widget-id', '74f12016-b7a4-48b5-85ad-a041d59361cb');
+            
+            // Как только скрипт загрузился, возвращаем кнопке исходный вид
+            script.onload = function() {
+                btn.innerText = 'ПОЛУЧИТЬ ДОСТУП К ОБУЧЕНИЮ';
+                btn.disabled = false;
+                
+                // Инструкция для SendPulse автоматически открыть попап, если он настроен на клик или показ
+                if (window.spPopups) {
+                    window.spPopups.open(); 
+                }
+            };
+
+            document.head.appendChild(script);
+        }
     </script>
 
 </body>
